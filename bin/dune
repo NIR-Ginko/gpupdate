@@ -1,0 +1,12 @@
+(executable
+  (name gpoa)
+  (modules gpoa)
+  (modes byte exe)
+  (libraries gpupdate))
+
+(executable
+  (name gpupdate)
+  (modules gpupdate)
+  (modes byte exe)
+  (libraries gpupdate obus))
+
