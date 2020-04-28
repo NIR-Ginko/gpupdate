@@ -11,8 +11,7 @@ let gpoa loglevel username =
 let hostname =
     let host = Unix.gethostname () in
     let upperhost = String.uppercase_ascii host in
-    let machine_name = upperhost ^ "$" in
-      print_endline machine_name
+      upperhost ^ "$"
 ;;
 
 let loglevel =
@@ -21,7 +20,7 @@ let loglevel =
 
 let username =
   let doc = "User name to apply group policies for" in
-  Arg.(value & pos 0 string "Revolt!" & info [] ~docv:"USERNAME" ~doc)
+  Arg.(value & pos 0 string hostname & info [] ~docv:"USERNAME" ~doc)
 
 let info =
   let doc = "Apply Group Policies for specified user" in
