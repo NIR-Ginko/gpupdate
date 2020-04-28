@@ -2,11 +2,18 @@
   (name gpoa)
   (modules gpoa)
   (modes byte exe)
-  (libraries gpupdate))
+  (flags (:standard -w -33))
+  (libraries gpupdate cmdliner core))
 
 (executable
   (name gpupdate)
   (modules gpupdate)
   (modes byte exe)
-  (libraries gpupdate obus))
+  (libraries gpupdate))
+
+(executable
+  (name storage)
+  (modules storage)
+  (modes byte exe)
+  (libraries gpupdate))
 

@@ -2,6 +2,9 @@ opam-version: "2.0"
 version: "1.0"
 maintainer: "nir@basealt.ru"
 authors: ["NIR"]
+depends: [
+  "obus"
+]
 build: [
   ["dune" "build" "-p" name]
 ]
