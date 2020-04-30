@@ -1,0 +1,6 @@
+(executable
+  (name gpstorage)
+  (modules gpstorage)
+  (modes byte)
+  (libraries cmdliner core sqlite3 obus))
+
