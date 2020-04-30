@@ -1,4 +1,6 @@
 (library
   (public_name gpupdate)
-  (libraries sqlite3))
+  (flags (:standard -w -32 -w -26))
+  (modules gpupdate hostname paths)
+  (libraries core))
 
