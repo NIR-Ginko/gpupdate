@@ -1,5 +1,5 @@
 let main () =
-  print_endline "gpoa"
+  print_endline "gpupdate"
   ;;
 
 main ()

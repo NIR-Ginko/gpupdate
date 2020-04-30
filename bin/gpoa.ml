@@ -1,19 +1,13 @@
 open Cmdliner;;
-open Unix;;
 
 type verbosity = Quiet | Fatal | Warning | Normal | Debug
 
 (* Main function *)
 let gpoa loglevel username =
+  let frontend_path = Gpupdate.frontend_module_path in
   ( Printf.printf "%d\n" loglevel
+  ; Gpupdate.run_modules frontend_path
   ; print_endline username )
-;;
-
-(* Get Machine Name for Active Directory *)
-let machinename =
-    let host = Unix.gethostname () in
-    let upperhost = String.uppercase_ascii host in
-      upperhost ^ "$"
 ;;
 
 let loglevel =
@@ -22,7 +16,7 @@ let loglevel =
 
 let username =
   let doc = "User name to apply group policies for" in
-  Arg.(value & pos 0 string machinename & info [] ~docv:"USERNAME" ~doc)
+  Arg.(value & pos 0 string Gpupdate.machinename & info [] ~docv:"USERNAME" ~doc)
 
 let info =
   let doc = "Apply Group Policies for specified user" in
