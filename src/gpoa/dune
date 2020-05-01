@@ -1,0 +1,7 @@
+(executable
+  (name gpoa)
+  (modules gpoa)
+  (modes byte exe)
+  (flags (:standard -w -33))
+  (libraries gpupdate cmdliner core))
+

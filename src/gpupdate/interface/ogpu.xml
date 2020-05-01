@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<node>
+      <interface name="com.redhat.oddjob_gpupdate">
+
+        <method name="gpupdate_computer">
+        </method>
+
+        <method name="gpupdate">
+		<arg name="username" direction="in" type="s"/>
+        </method>
+
+        <method name="gpupdatefor">
+		<arg name="username" direction="in" type="s"/>
+        </method>
+
+      </interface>
+</node>

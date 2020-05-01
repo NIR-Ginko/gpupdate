@@ -2,11 +2,9 @@
 
 # Build bytecode and native gpoa versions
 all:
-	dune build bin/gpoa.bc
-	dune build bin/gpoa.exe
-	dune build bin/gpupdate.bc
-	dune build bin/gpupdate.exe
-	dune build gpstorage/gpstorage.bc
+	dune build src/gpoa/gpoa.bc
+	dune build src/gpupdate/gpupdate.bc
+	dune build src/gpstorage/gpstorage.bc
 
 codeformat:
 	dune build --auto-promote @fmt
