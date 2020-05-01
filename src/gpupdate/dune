@@ -3,6 +3,5 @@
   (modules gpupdate ogpu_client ogpu_interfaces)
   (modes byte)
   (libraries lwt obus)
-  (preprocess (pps lwt_ppx))
-  )
+  (preprocess (pps lwt_ppx)))
 
