@@ -1,0 +1,3 @@
+/usr/sbin/gpoa	--	gen_context(system_u:object_r:gpoa_exec_t,s0)
+/var/cache/gpupdate/registry.sqlite	--	gen_context(system_u:gpstorage_r:gpstorage_var_registry_t,s0)
+

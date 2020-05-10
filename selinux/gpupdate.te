@@ -1,0 +1,6 @@
+policy_module(gpupdate, 0.1.0)
+
+type gpupdate_t;
+type gpupdate_exec_t;
+init_daemon_domain(gpupdate_t, gpupdate_exec_t)
+

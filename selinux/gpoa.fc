@@ -1,0 +1,2 @@
+# File context
+/usr/sbin/gpoa	--	gen_context(system_u:object_r:gpoa_exec_t,s0)

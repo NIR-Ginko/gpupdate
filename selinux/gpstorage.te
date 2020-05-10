@@ -1,0 +1,12 @@
+# Type enforcement
+policy_module(gpstorage, 0.1.0)
+
+type gpstorage_t; # Process type (Domain)
+type gpstorage_exec_t; # File type
+role gpstorage_r;
+init_daemon_domain(gpstorage_t, gpstorage_exec_t)
+role gpstorage_r types gpstorage_t;
+
+type gpstorage_var_registry_t;
+files_type(gpstorage_var_registry_t)
+

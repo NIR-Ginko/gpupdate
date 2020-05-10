@@ -1,0 +1,7 @@
+# Type Enforcement
+policy_module(gpoa,0.1.0)
+
+type gpoa_t; # Process type (Domain)
+type gpoa_exec_t; # File type
+init_daemon_domain(gpoa_t, gpoa_exec_t)
+
