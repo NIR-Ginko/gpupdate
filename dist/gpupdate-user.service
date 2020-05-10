@@ -1,0 +1,16 @@
+[Unit]
+Description=gpupdate in userspace
+#Requires=basic.target
+
+# gpupdate on Windows runs once per hour
+[Service]
+Environment="PATH=/bin:/sbin:/usr/bin:/usr/sbin"
+Type=simple
+RestartSec=3600
+TimeoutSec=3000
+Restart=always
+ExecStart=/usr/sbin/gpoa
+
+[Install]
+WantedBy=default.target
+
