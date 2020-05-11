@@ -1,6 +1,10 @@
+# OCaml files
 _build
 .merlin
+
+# SELinux files
 *.pp
 *.tmp
+*.mod
 tmp
 
