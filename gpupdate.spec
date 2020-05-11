@@ -12,22 +12,23 @@ Group: Other
 Url: https://github.com/NIR-Ginko/gpupdate
 BuildArch: noarch
 
+# To build SELinux rules
+BuildRequires: checkpolicy
+# To build OCaml binaries
+BuildRequires: rpm-build-ocaml
+BuildRequires: ocaml-findlib-devel
+BuildRequires: dune
+BuildRequires: opam
+BuildRequires: ocaml >= 4.0.0
+
 Requires: ocaml >= 4.0.0
 Requires: control
-Requires: local-policy >= 0.1.0
-
-BuildRequires: rpm-build-ocaml
-BuildRequires: ocaml >= 4.0.0
-BuildRequires: opam
-BuildRequires: dune
-BuildRequires: ocaml-findlib-devel
-
-#Requires: oddjob-%name >= 0.2.0
-#Requires: libnss-role >= 0.5.0
-#Requires: local-policy >= 0.3.0
+Requires: local-policy >= 0.3.0
 #Requires: pam-config >= 1.8
+#Requires: libnss-role >= 0.5.0
 # This is needed by shortcuts_applier
 #Requires: desktop-file-utils
+#Requires: oddjob-%name >= 0.2.0
 
 Source0: %name-%version.tar
 
