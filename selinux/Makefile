@@ -10,15 +10,15 @@ MOD_GPOA=gpoa
 # compile the policy.
 gpstorage:
 	make -f /usr/share/selinux/devel/Makefile $(MOD_GPSTORAGE).pp
-	checkmodule -M -m -o $(MOD_GPSTORAGE).mod $(MOD_GPSTORAGE).pp
+	checkmodule -M -m -o $(MOD_GPSTORAGE).mod tmp/$(MOD_GPSTORAGE).tmp
 
 gpoa:
 	make -f /usr/share/selinux/devel/Makefile $(MOD_GPOA).pp
-	checkmodule -M -m -o $(MOD_GPOA).mod $(MOD_GPOA).pp
+	checkmodule -M -m -o $(MOD_GPOA).mod tmp/$(MOD_GPOA).tmp
 
 gpupdate:
 	make -f /usr/share/selinux/devel/Makefile $(MOD_GPUPDATE).pp
-	checkmodule -M -m -o $(MOD_GPUPDATE).mod $(MOD_GPUPDATE).pp
+	checkmodule -M -m -o $(MOD_GPUPDATE).mod tmp/$(MOD_GPUPDATE).tmp
 
 all: gpstorage gpoa gpupdate
 
